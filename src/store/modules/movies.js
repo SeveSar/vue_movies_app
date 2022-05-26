@@ -45,11 +45,6 @@ const moviesStore = {
     },
   },
   actions: {
-    // что бы не вызывать fetchMovies в mounted(пока загрузится компонент) мы создаём рутовый экшн чтобы вызывать fetchmovies при загрузке приложения
-    // данный метод(initMoviesStore) будет вынесен из модуля и будет доступен откуда угодно
-    // и у нас будет возможность вызвать данный метод из корневой Store
-    // handler(context)
-    // dispatch позволяет вызвать любой экшн из store в данном случае из нашей сторы
     initMoviesStore: {
       handler({ dispatch }) {
         dispatch("fetchMovies");
